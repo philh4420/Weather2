@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     locationElement.textContent = data.name;
     temperatureElement.textContent = data.main.temp;
     conditionElement.textContent = data.weather[0].description;
-    const iconUrl = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     iconElement.style.backgroundImage = `url(${iconUrl})`;
     iconElement.alt = data.weather[0].description;
     windSpeedElement.textContent = data.wind.speed;
@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
     visibilityElement.textContent = data.visibility / 1000; // Convert from meters to kilometers
     cloudCoverElement.textContent = data.clouds.all;
     precipitationElement.textContent = data.rain ? data.rain['1h'] : 0; // Check if rain data exists
-    uvIndexElement.textContent = ''; // OpenWeather API doesn't provide UV index
   }
 
   function updateHourlyForecast(data) {
@@ -146,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p><strong>Max Temperature:</strong> ${maxTemp} °C</p>
         <p><strong>Min Temperature:</strong> ${minTemp} °C</p>
         <p><strong>Condition:</strong> ${condition.description}</p>
-        <img src="http://openweathermap.org/img/w/${condition.icon}.png" alt="${condition.description}">
+        <img src="https://openweathermap.org/img/w/${condition.icon}.png" alt="${condition.description}">
       `;
       forecastElement.appendChild(forecastItem);
     });
