@@ -11,9 +11,8 @@
 <body>
   <header>
     <h1>Weather App</h1>
-    <p>Issue with searching location by post code for now!!!!</p>
     <div class="search">
-      <input type="text" id="locationInput" placeholder="Enter location by name...">
+      <input type="text" id="locationInput" placeholder="Enter location...">
       <button id="searchButton">Search</button>
     </div>
   </header>
@@ -23,6 +22,7 @@
         <section class="weather-info">
           <h2>Current Weather</h2>
           <p><strong>Location:</strong> <span id="location"></span></p>
+          <p><strong>Date and Time:</strong> <span id="dateTime"></span></p>
           <p><strong>Temperature:</strong> <span id="temperature"></span> °C</p>
           <p><strong>Condition:</strong> <span id="condition"></span></p>
           <div id="icon" class="weather-icon"></div>
@@ -35,6 +35,9 @@
           <p><strong>Cloud Cover:</strong> <span id="cloudCover"></span>%</p>
           <p><strong>Precipitation:</strong> <span id="precipitation"></span> mm</p>
           <p><strong>UV Index:</strong> <span id="uvIndex"></span></p>
+          <p><strong>Sunrise:</strong> <span id="sunrise"></span></p>
+          <p><strong>Sunset:</strong> <span id="sunset"></span></p>
+          <p><strong>Moon Phase:</strong> <span id="moonPhase"></span></p>
         </section>
       </div>
       <div class="mosaic-item hourly-forecast">
@@ -57,9 +60,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js"
     integrity="sha512-dUlSLLkxslGILhPdCkALwk4szPhp3xmZIKFtlUD+O9Lslq41Aksmdt5OGqpomDoT4FsCUH70jQU8ezZHI3v1RQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
-    integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="script.js"></script>
 </body>
